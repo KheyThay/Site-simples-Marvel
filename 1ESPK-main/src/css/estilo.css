@@ -3,12 +3,11 @@
     --text-color2: #ffffff;
     --main-color: #7e7e7e;
     --bg-color: #002231;
-    --second-color: #000;
-    /*--:;*/
+    --second-color: #00b0bd;
 }
 *{
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
@@ -22,7 +21,6 @@ header{
     width: 100%;
     padding: 40px 60px;
 }
-
 nav{
     display: flex;
     align-items: center;
@@ -31,19 +29,97 @@ nav{
 nav ul{
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap:50px;
 }
 nav ul li a{
-    color: var(--text-color2);
+    color:var(--text-color2);
     font-size: 1rem;
-    transition: all 0.1 ease;
+    transition:  all 0.1s ease;
     text-transform: uppercase;
 }
 nav ul li a:hover{
-    border-bottom: 3px solid var(--main-color);
+    border-bottom: 3px solid var(--second-color);
 }
 .logo{
     font-size: 2rem;
     font-weight: 800;
-    color: var(--text-color2);
+    color:var(--text-color2);
+}
+
+.main{
+    width: 100%;
+}
+
+.home{
+    padding:1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+.left p{
+    font-size: 2rem;
+    font-weight: 900;
+    color:var(--second-color);
+    margin-bottom: 10px;
+}
+
+.left h4{
+    font-size: 1.2rem;
+    color:var(--text-color2);
+    margin-bottom: 3rem;
+}
+.btn{
+    padding: 1rem 5rem;
+    background-color: var(--second-color);
+    border-radius: 30px;
+    color: var(--bg-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    box-shadow: 0 5px 10px var(--text-color2);
+}
+.right img{
+    width: 400px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    animation: efeito 1.8s infinite alternate;
+}
+.shadow{
+    width: 400px;
+    height: 45px;
+    background: var(--second-color);
+    margin: 0 auto;
+    filter:blur(5px);
+    animation: efeito2 1.8s infinite alternate;
+}
+@keyframes efeito{
+    0%{
+        transform:translateY(0);
+    }
+    100%{
+        transform: translateY(15px);
+    }
+}
+@keyframes efeito2 {
+
+    0%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(.85,.85);
+
+    }
 }
